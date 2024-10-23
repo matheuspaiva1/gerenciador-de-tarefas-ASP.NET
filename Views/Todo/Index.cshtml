@@ -1,11 +1,28 @@
-@model TWtodos2.Models.Todo
+@model List<TWtodos2.Models.Todo>
 <h1>Todo Controller</h1>
 
-<h2>
-  @Model.Title
-</h2>
-<br>
-@Model.Id
-<br>
-@Model.CreatedAt
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Criado em</th>
+      <th scope="col">Data de Entrega</th>
+      <th scope="col">Finalizada em</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var todo in Model){
+      <tr>
+        <td>@todo.Id</td>
+        <td>@todo.Title</td>
+        <td>@todo.CreatedAt</td>
+        <td>@todo.DeadLine</td>
+        <td>@todo.FinishedAt</td>
+        <td></td>
+      </tr>
+    }
+  </tbody>
+</table>
 

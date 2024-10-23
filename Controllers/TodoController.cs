@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
+using TWtodos2.Contexts;
 using TWtodos2.Models;
 
 namespace TWtodos2.Controllers;
 
 public class TodoController : Controller {
-  public IActionResult Index() {
-    var todo = new Todo{
-      Id = 1,
-      Title = "Estudar c#",
-      CreatedAt = DateTime.Now,
-      DeadLine = DateOnly.FromDateTime(DateTime.Now)
+  private readonly TWTodosContext _context;
 
-    };
-    return View(todo);
+  public TodoController(TWTodosContext context) {
+    _context = context;
+  }
+  public IActionResult Index() {
+    var todos = _context.Todos.ToList();
+    return View(todos);
   }
 }
