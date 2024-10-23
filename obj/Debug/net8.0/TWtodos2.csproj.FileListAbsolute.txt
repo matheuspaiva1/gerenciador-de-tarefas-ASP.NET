@@ -156,3 +156,4 @@ C:\youtube\TWtodos2\obj\Debug\net8.0\TWtodos2.pdb
 C:\youtube\TWtodos2\obj\Debug\net8.0\TWtodos2.genruntimeconfig.cache
 C:\youtube\TWtodos2\obj\Debug\net8.0\ref\TWtodos2.dll
 C:\youtube\TWtodos2\bin\Debug\net8.0\runtimes\linux-musl-s390x\native\libe_sqlite3.so
+C:\youtube\TWtodos2\obj\Debug\net8.0\TWtodos2.sourcelink.json
