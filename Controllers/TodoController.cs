@@ -24,7 +24,7 @@ public class TodoController : Controller {
   public IActionResult Create(Todo todo) {
     _context.Todos.Add(todo);
     _context.SaveChanges();
-    return RedirectToAction("Index");
+    return RedirectToAction(nameof(Index));
   }
 
 }
