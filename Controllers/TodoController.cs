@@ -22,9 +22,27 @@ public class TodoController : Controller {
   }
   [HttpPost]
   public IActionResult Create(Todo todo) {
+    todo.CreatedAt = DateTime.Now;
     _context.Todos.Add(todo);
     _context.SaveChanges();
     return RedirectToAction(nameof(Index));
   }
 
+  public IActionResult Edit(int id){
+    var todo = _context.Todos.Find(id);
+    ViewData["Title"] = "Editar tarefa";
+    return View("Form", todo);
+  }
+  [HttpPost]
+  public IActionResult Edit(Todo todo){
+    _context.Todos.Update(todo);
+    _context.SaveChanges();
+    return RedirectToAction(nameof(Index));
+  }
+
+  public IActionResult Delete(int id){
+    var todo = _context.Todos.Find(id);
+    ViewData["Title"] = "Excluir Tarefa";
+    return View(todo);
+  }
 }
