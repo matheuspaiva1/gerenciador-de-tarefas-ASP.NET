@@ -2,7 +2,7 @@
     <img aling="center" src="https://www.csharp411.com/wp-content/uploads/2023/03/word-image-720-1.png"/>
 </div>
 
-### EVENTS MANAGER
+### GERENCIADOR DE TAREFAS
 ---
 ### SOBRE O PROJETO
 
