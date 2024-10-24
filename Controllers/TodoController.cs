@@ -73,8 +73,7 @@ public class TodoController : Controller {
     if(todo is null){
       return NotFound();
     }
-    todo.FinishedAt = DateOnly.FromDateTime(DateTime.Now);
-    _context.SaveChanges();
+    todo.FinishTodo();
     return RedirectToAction(nameof(Index));
     
   }

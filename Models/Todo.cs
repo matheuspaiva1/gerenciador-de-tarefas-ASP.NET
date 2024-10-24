@@ -17,4 +17,8 @@ public class Todo {
   [FutureOrPresent]
   public DateOnly DeadLine { get; set; }
   public DateOnly? FinishedAt { get; set; }
+
+  public void FinishTodo(){
+    FinishedAt = DateOnly.FromDateTime(DateTime.Now);
+  }
 }
