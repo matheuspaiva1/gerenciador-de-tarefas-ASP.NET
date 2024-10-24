@@ -7,6 +7,7 @@
 ### SOBRE O PROJETO
 
 Desenvolvimento de uma API RESTful para gerenciamento de tarefas, utilizando ASP.NET Core. Essa aplicação permite criação, leitura, atualização e exclusão de tarefas.
+
 ---
 ### TECNOLOGIAS USADAS
 - C#
