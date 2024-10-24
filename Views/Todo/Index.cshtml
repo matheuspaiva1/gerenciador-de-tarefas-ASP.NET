@@ -30,7 +30,7 @@
           <a asp-controller="Todo" asp-action="Edit" asp-route-id="@todo.Id" class="btn btn-warning btn-sm" >
             Editar
           </a>
-          <a class="btn btn-danger btn-sm" >
+          <a asp-controller="Todo" asp-action="Delete" asp-route-id="@todo.Id" class="btn btn-danger btn-sm" >
             Excluir
           </a>
         </td>
