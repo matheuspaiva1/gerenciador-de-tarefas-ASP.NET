@@ -24,10 +24,10 @@
           @(todo.FinishedAt.HasValue ? todo.FinishedAt : "-")
         </td>
         <td>
-          <a class="btn btn-success btn-sm" >
+          <a asp-controller="Todo" asp-action="Finish" asp-route-id="@todo.Id" class="btn btn-success btn-sm @(todo.FinishedAt.HasValue ? "disabled" : "")" >
             Concluir
           </a>
-          <a asp-controller="Todo" asp-action="Edit" asp-route-id="@todo.Id" class="btn btn-warning btn-sm" >
+          <a asp-controller="Todo" asp-action="Edit" asp-route-id="@todo.Id" class="btn btn-warning btn-sm @(todo.FinishedAt.HasValue ? "disabled" : "")" >
             Editar
           </a>
           <a asp-controller="Todo" asp-action="Delete" asp-route-id="@todo.Id" class="btn btn-danger btn-sm" >
