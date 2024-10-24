@@ -46,6 +46,8 @@ public class TodoController : Controller {
       _context.SaveChanges();
       return RedirectToAction(nameof(Index));
     }
+    ViewData["Title"] = "Editar tarefa";
+    return View("Form", todo);
   }
 
   public IActionResult Delete(int id){
